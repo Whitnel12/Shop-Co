@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+html,body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+}
+
+#newArrivalsSlider {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#slider::-webkit-scrollbar {
+    /* display: none; Untuk Chrome, Safari, dan Edge */
+  }
+
+
+#topSellingSlider {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+#topSellingSlider::-webkit-scrollbar {
+    /* display: none; Untuk Chrome, Safari, dan Edge */
+  }
+
