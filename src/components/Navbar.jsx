@@ -41,7 +41,7 @@ const Navbar = () => {
             onClick={() => setMenu(!menu)}
           />
 
-          <label className=" font-black text-3xl text-center cursor-pointer lg:text-xl 2xl:text-3xl">
+          <label className=" font-black text-3xl text-center cursor-pointer lg:text-2xl 2xl:text-3xl">
             SHOP.CO
           </label>
           <ul className="lg:flex xl:gap-8 2xl:gap-12 lg:gap-6 lg:text-xs text-lg hidden 2xl:text-base">
@@ -60,7 +60,7 @@ const Navbar = () => {
               name=""
               id=""
               placeholder="Cari Produk"
-              className="pl-10 py-2 lg:pl-10 lg:p-1 xl:text-xs xl:py-3 rounded-full lg:w-[300px] xl:w-[450px] 2xl:w-[700px]  hidden lg:block bg-[#F0F0F0]"
+              className="pl-10 py-2 lg:py-1 lg:pl-10 lg:p-1 xl:text-xs xl:py-3 rounded-full lg:w-[380px] xl:w-[450px] 2xl:w-[700px]  hidden lg:block bg-[#F0F0F0]"
             />
             {/* <FaSearch className="absolute top-3 left-4 text-neutral-600" /> */}
             <FaSearch className="lg:absolute top-3 left-4 lg:top-[9px] xl:top-3 lg:text-[#929292] xl:size-4 lg:size-4 size-5 2xl:top-3" />
