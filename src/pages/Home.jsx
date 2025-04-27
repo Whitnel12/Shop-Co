@@ -1,4 +1,3 @@
-import Navbar from "../components/Navbar";
 import { FaStar } from "react-icons/fa";
 import { FaCaretRight, FaCaretLeft } from "react-icons/fa6";
 import Label from "../components/Label";
@@ -167,9 +166,9 @@ const Home = () => {
   };
 
   return (
-    <div className="bg-[#F2F0F1] h-fit  flex flex-col lg:gap-y-0 overflow-hidden transition-all duration-500 ease-in-out">
+    <div className="bg-[#F2F0F1] h-fit flex flex-col lg:gap-y-0 overflow-hidden transition-all duration-500 ease-in-out">
       {/* <Navbar /> */}
-      <div className="mt-[75px] 2xl:px-60   pt-10 xl:px-36 lg:flex px-5 lg:mt-[70px] lg:max-h-fit lg:justify-between">
+      <div className="mt-[75px] 2xl:px-60 pt-10 xl:px-36 lg:flex px-5 lg:mt-[70px] lg:max-h-fit lg:justify-between">
         <div className="lg:h-fit lg:w-fit lg:mt-14 lg:gap-y-5 flex flex-col gap-y-3 ">
           <label className="md:text-center  lg:text-start xl:text-6xl  md:text-6xl font-extrabold text-[40px] sm:text-5xl leading-11 md:leading-18 xl:leading-16 lg:leading-12 lg:w-fit lg:text-5xl">
             FIND CLOTHES <br />
@@ -240,11 +239,11 @@ const Home = () => {
         </div>
       </div>
 
-      <div className="2xl:px-60  h-fit border border-green-800 2xl:relative relative pt-7 xl:px-36 w-full flex flex-col gap-y-3  px-5 lg:px-5">
+      <div className="2xl:px-60 bg-white  h-fit border border-green-800 2xl:relative relative pt-7 xl:px-36 w-full flex flex-col gap-y-3  px-5 lg:px-5">
         <div className="pt-10">
           <Label
             name={"NEW ARRIVALS"}
-            custom={"lg:text-4xl 2xl:m-auto md:text-4xl "}
+            custom={"lg:text-4xl 2xl:m-auto md:text-4xl leading-11"}
           />
           <FaCaretLeft
             className="opacity-50 2xl:top-70 2xl:left-50 hover:opacity-100 absolute left-7 xl:left-0 size-8 cursor-pointer text-red-900"
@@ -283,12 +282,12 @@ const Home = () => {
         <div className="pt-10">
           <Label
             name={"TOP SELLING"}
-            custom={"lg:text-4xl 2xl:m-auto md:text-4xl "}
+            custom={"lg:text-4xl 2xl:m-auto md:text-4xl leading-11"}
           />
 
           <div
             id="topSellingSlider"
-            className="flex gap-3 border border-red-500 h-96 w-full xl:relative items-center overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+            className="flex gap-3 h-96 w-full xl:relative items-center overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
           >
             <FaCaretLeft
               className="opacity-50 hover:opacity-100 absolute left-7 xl:left-0 size-8 cursor-pointer text-red-900"
@@ -349,7 +348,7 @@ const Home = () => {
           <div className="w-full bg-[#F0F0F0] h-fit flex flex-col gap-y-5 px-8 rounded-3xl py-8 ">
             <Label
               name={"BROWSE BY DRESS STYLE"}
-              custom={"md:text-4xl 2xl:m-auto 2xl:w-fit"}
+              custom={"md:text-4xl 2xl:m-auto 2xl:w-fit leading-11"}
             />
 
             <div className=" grid grid-cols-1 gap-5 w-full ">
@@ -416,7 +415,7 @@ const Home = () => {
               <div className=" flex items-start w-[70%]">
                 <Label
                   name={"OUR HAPPY COSTUMERS"}
-                  custom={"md:text-4xl md:text-start lg 2xl:w-full"}
+                  custom={"md:text-4xl md:text-start lg 2xl:w-full leading-11"}
                 />
               </div>
               <div className="w-full md:w-[40%] flex flex-col items-end justify-end">
@@ -466,7 +465,7 @@ const Home = () => {
                 textSize={
                   "md:text-3xl text-5xl lg:text-4xl 2xl:text-[50px] lg:w-[500px] text-start"
                 }
-                // custom={"border border-red-700"}
+                custom={"leading-11"}
               />
               <div className="flex border 2xl:w-[45%] flex-col gap-y-3 w-[100%] lg:w-[400px] justify-center lg:justify-center  2xl:items-end">
                 <div className="border h-fit w-full relative">
@@ -491,7 +490,7 @@ const Home = () => {
           <div>
             <div className="lg:flex lg:gap-10 lg:border-b-2 lg:border-[#ebebeb] lg:mb-3">
               <div className=" h-full flex flex-col gap-y-4  lg:w-[40%] ">
-                <Label name={"SHOP.CO"} custom={"lg:text-4xl"} />
+                <Label name={"SHOP.CO"} custom={"lg:text-4xl leading-11"} />
                 <p className="leading-5 text-[#8b8b8b] text-sm font-medium">
                   We have clothes that suits your style and which your proud to
                   wear. From women to men.
