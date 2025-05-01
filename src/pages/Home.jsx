@@ -454,7 +454,9 @@ const Home = () => {
                   </div>
                   {/* <MdDone /> */}
                   {/* <h1>hello</h1> */}
-                  <p className="line-clamp-6 text-[#7E7E7E]">{item.comment}</p>
+                  <p className="line-clamp-6 text-[#7E7E7E] text-base">
+                    {item.comment}
+                  </p>
                 </div>
               ))}
             </div>

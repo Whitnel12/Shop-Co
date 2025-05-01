@@ -50,7 +50,7 @@ const ProductDetail = () => {
           <div className="">
             <Label
               name={"ONE LIFE GRAPHIC T-SHIRT"}
-              custom={"border text-start w-[90%] leading-7"}
+              custom={"text-start w-[90%] leading-7"}
               textSize="text-3xl"
             />
           </div>
@@ -58,16 +58,31 @@ const ProductDetail = () => {
             <div className="border">box1</div>
             <div className="border">box2</div>
           </div>
-          <div className="border flex gap-3 items-center">
-            <div className="border">
-              <h3 className="font-bold text-3xl ">$260</h3>
+          <div className="bg-red-600">
+            <div className=" flex gap-3 items-center">
+              <div className="">
+                <h3 className="font-bold text-3xl ">$260</h3>
+              </div>
+              <div className="font-bold text-3xl">
+                <h3 className="text-[#B3B3B3]">$300</h3>
+              </div>
+              <div className="bg-[#FBECEC] font-semibold text-[#E94D3F] h-[100%] py-1 px-3 rounded-2xl">
+                -40%
+                {/* <div className="border bg-red-100 h-fit">-40%f</div> */}
+              </div>
             </div>
-            <div className="border font-bold text-3xl">
-              <h3 className="text-[#B3B3B3]">$300</h3>
+            <div className="text-[#797979] text-base">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Officiis
+              voluptas pariatur eum, tenetur illo hic quis quibusdam, provident
+              corrupti.
             </div>
-            <div className="bg-blue-700 h-[100%]">
-              sk
-              {/* <div className="border bg-red-100 h-fit">-40%f</div> */}
+          </div>
+          <div className="border bg-blue-500">
+            <div className="">
+              hello Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Blanditiis error praesentium accusantium voluptas cum cupiditate,
+              vero non animi suscipit deserunt rerum quo deleniti quibusdam
+              repudiandae. Maiores nam iste deserunt sed?
             </div>
           </div>
         </div>
