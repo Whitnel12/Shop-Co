@@ -1,6 +1,7 @@
 import { MdKeyboardArrowRight } from "react-icons/md";
 import Label from "../components/Label";
 import { GiSettingsKnobs } from "react-icons/gi";
+import Comment from "../components/Comment";
 
 const ProductDetail = () => {
   return (
@@ -132,7 +133,7 @@ const ProductDetail = () => {
               FAQs
             </p>
           </div>
-          <div className="flex justify-between border items-center">
+          <div className="flex justify-between items-center">
             <div className="flex gap-2">
               <div className="font-bold text-lg">All Reviews</div>
               <div>(451)</div>
@@ -146,7 +147,21 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
-          <div className="h-screen border">ndwkdn</div>
+          <div className="flex flex-col gap-y-4">
+            <Comment name={"irwan"} comment={"krsjdjsgfgfgfgf"} />
+            <Comment name={"irwan"} comment={"krsjdjsgfgfgfgf"} />
+            <Comment name={"irwan"} comment={"krsjdjsgfgfgfgf"} />
+          </div>
+
+          <div className="border-[1.5px] font-semibold rounded-full w-fit px-6 py-3 m-auto border-[#E7E7E7] text-[#1F1F1F]">
+            Load More Reviews
+          </div>
+
+          <div className="w-[80%] m-auto">
+            <Label name={"YOU MIGHT ALSO LIKE"} />
+          </div>
+
+          <div className="h-screen border">sdds</div>
         </div>
       </div>
     </div>

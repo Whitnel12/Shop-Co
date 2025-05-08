@@ -10,7 +10,7 @@ import { MdDone } from "react-icons/md";
 import { TfiEmail } from "react-icons/tfi";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
-import { label } from "framer-motion/client";
+import Comment from "../components/Comment";
 
 const Home = () => {
   const slideLeft = (slideId) => {
@@ -438,28 +438,35 @@ const Home = () => {
               className="h-full w-[100%] flex flex-row gap-y-8 gap-5  overflow-x-scroll scroll scroll-smooth scrollbar-hide"
             >
               {itemComments.map((item, index) => (
-                <div
-                  key={index}
-                  className="border-2 md:min-w-[45%] md:max-w-[45%] xl:min-w-[30%] min-w-[100%] md:h-fit border-[#E7E7E7] p-5 rounded-3xl flex flex-col gap-y-1 min-h-55"
-                >
-                  <div className="flex gap-1">
-                    {[...Array(item.stars)].map((_, i) => (
-                      <FaStar key={i} className="text-amber-400 size-[15px]" />
-                    ))}
-                  </div>
+                // <div
+                //   key={index}
+                //   className="border-2 md:min-w-[45%] md:max-w-[45%] xl:min-w-[30%] min-w-[100%] md:h-fit border-[#E7E7E7] p-5 rounded-3xl flex flex-col gap-y-1 min-h-55"
+                // >
+                //   <div className="flex gap-1">
+                //     {[...Array(item.stars)].map((_, i) => (
+                //       <FaStar key={i} className="text-amber-400 size-[15px]" />
+                //     ))}
+                //   </div>
 
-                  <div className="flex gap-2 items-center">
-                    <h3 className="font-bold text-[16.5px]">{item.name}</h3>
-                    <MdDone className="text-white size-5 p-1 rounded-full bg-green-500" />
-                  </div>
-                  {/* <MdDone /> */}
-                  {/* <h1>hello</h1> */}
-                  <p className="line-clamp-6 text-[#7E7E7E] text-base">
-                    {item.comment}
-                  </p>
-                </div>
+                //   <div className="flex gap-2 items-center">
+                //     <h3 className="font-bold text-[16.5px]">{item.name}</h3>
+                //     <MdDone className="text-white size-5 p-1 rounded-full bg-green-500" />
+                //   </div>
+                //   {/* <MdDone /> */}
+                //   {/* <h1>hello</h1> */}
+                //   <p className="line-clamp-6 text-[#7E7E7E] text-base">
+                //     {item.comment}
+                //   </p>
+                // </div>
+                <Comment
+                  key={index}
+                  name={item.name}
+                  comment={item.comment}
+                  star={item.stars}
+                />
               ))}
             </div>
+            {/* <Comment /> */}
             <div className="top-[450px] md:top-[438px] lg:top-[422px] absolute bg-black h-fit rounded-3xl p-5 md:flex flex flex-col md:flex-row lg:items-center gap-y-3 justify-center w-full gap-3 xl:justify-between xl:p-11 2xl:p-9">
               <Label
                 name={"STAY UPTO DATE ABOUT OUR LATEST OFFERS"}
