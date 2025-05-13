@@ -1,16 +1,11 @@
-import { FaStar } from "react-icons/fa";
 import { FaCaretRight, FaCaretLeft } from "react-icons/fa6";
 import Label from "../components/Label";
 import Cart from "../components/Cart";
-import { TiSocialFacebook } from "react-icons/ti";
-import { TbBrandInstagram } from "react-icons/tb";
-import { AiOutlineGithub } from "react-icons/ai";
-import { RiTwitterXLine } from "react-icons/ri";
-import { MdDone } from "react-icons/md";
 import { TfiEmail } from "react-icons/tfi";
 import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 import Comment from "../components/Comment";
+import Footer from "../components/Footer";
 
 const Home = () => {
   const slideLeft = (slideId) => {
@@ -49,45 +44,6 @@ const Home = () => {
       name: "Irwan Syahrir",
       comment:
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, non dolor! Asperiores eligendi culpa, mollitia saepe expedita sunt iste debitis officiis cupiditate! Qui vitae alias quis voluptatibus laborum repudiandae officia.",
-    },
-  ];
-
-  const itemFooter = [
-    {
-      title: "COMPANY",
-      teks: {
-        teks1: "About",
-        teks2: "Features",
-        teks3: "Works",
-        teks4: "Career",
-      },
-    },
-    {
-      title: "HELP",
-      teks: {
-        teks1: "Costumer Support",
-        teks2: "Delivery Details",
-        teks3: "Terms & Conditions",
-        teks4: "Privacy  Policy",
-      },
-    },
-    {
-      title: "FAQ",
-      teks: {
-        teks1: "Account",
-        teks2: "Manage Deliveries",
-        teks3: "Orders",
-        teks4: "Payment",
-      },
-    },
-    {
-      title: "RESOURCES",
-      teks: {
-        teks1: "Free eBooks",
-        teks2: "Development Tutorial",
-        teks3: "How to - Blog",
-        teks4: "Youtube Playlist",
-      },
     },
   ];
 
@@ -135,35 +91,6 @@ const Home = () => {
       price: 520,
     },
   ];
-
-  const FooterLink = () => {
-    return (
-      <>
-        {itemFooter.map((item, index) => (
-          <div
-            className="pt-2 gap-y-2 flex flex-col font-medium  w-[50%]"
-            key={index}
-          >
-            <h2 className=" tracking-widest lg:text-base">{item.title}</h2>
-            <ul className="text-[#8b8b8b] text-sm lg:text-sm font-medium flex flex-col gap-y-2">
-              <li>
-                <a href="">{item.teks.teks1}</a>
-              </li>
-              <li>
-                <a href="">{item.teks.teks2}</a>
-              </li>
-              <li>
-                <a href="">{item.teks.teks2}</a>
-              </li>
-              <li>
-                <a href="">{item.teks.teks4}</a>
-              </li>
-            </ul>
-          </div>
-        ))}
-      </>
-    );
-  };
 
   return (
     <div className="bg-[#F2F0F1] h-fit flex flex-col lg:gap-y-0 overflow-hidden transition-all duration-500 ease-in-out">
@@ -495,7 +422,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="pt-66 md:pt-40 h-fit]">
+        {/* <div className="pt-66 md:pt-40 h-fit]">
           <div>
             <div className="lg:flex lg:gap-10 lg:border-b-2 lg:border-[#ebebeb] lg:mb-3">
               <div className=" h-full flex flex-col gap-y-4  lg:w-[40%] ">
@@ -558,7 +485,8 @@ const Home = () => {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
+        <Footer custom={"pt-66 md:pt-40 "} />
       </div>
     </div>
   );
