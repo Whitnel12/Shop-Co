@@ -390,6 +390,7 @@ const Home = () => {
                   name={item.name}
                   comment={item.comment}
                   star={item.stars}
+                  custom={"xl:min-w-[35%] 2xl:min-w-[35%] lg:min-w-[35%] "}
                 />
               ))}
             </div>

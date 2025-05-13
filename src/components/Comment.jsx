@@ -1,9 +1,11 @@
 import { FaStar } from "react-icons/fa";
 import { MdDone } from "react-icons/md";
 
-const Comment = ({ star, name, comment }) => {
+const Comment = ({ star, name, comment, custom }) => {
   return (
-    <div className="border-[1.5px] md:min-w-[45%] lg:min-w-full md:max-w-[45%] xl:min-w-[30%] min-w-[100%] md:h-fit border-[#E7E7E7] p-5 rounded-3xl flex flex-col gap-y-1 min-h-55">
+    <div
+      className={`border-[1.5px] md:min-w-[45%]  md:max-w-[45%] ${custom}  min-w-[100%]  md:h-fit border-[#E7E7E7] p-5 rounded-3xl flex flex-col gap-y-1 min-h-55`}
+    >
       <div className="flex gap-1">
         {[...Array(star)].map((_, i) => (
           <FaStar key={i} className="text-amber-400 size-[15px]" />

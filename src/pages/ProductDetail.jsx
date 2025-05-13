@@ -71,13 +71,21 @@ const ProductDetail = () => {
                 </div>
               </div>
             </div>
-            <div className="flex flex-col gap-y-4 lg:grid lg:grid-cols-2 lg:gap-4">
-              <Comment name={"irwan"} comment={"krsjdjsgfgfgfgf"} />
-              <Comment name={"irwan"} comment={"krsjdjsgfgfgfgf"} />
-              <Comment name={"irwan"} comment={"krsjdjsgfgfgfgf"} />
-              <Comment name={"irwan"} comment={"krsjdjsgfgfgfgf"} />
-              <Comment name={"irwan"} comment={"krsjdjsgfgfgfgf"} />
-              <Comment name={"irwan"} comment={"krsjdjsgfgfgfgf"} />
+            <div className="flex flex-col gap-y-4 lg:gap-4 lg:grid lg:grid-cols-2">
+              <Comment
+                name={"irwan"}
+                comment={"krsjdjsgfgfgfgf"}
+                custom={
+                  "xl:min-w-full md:min-w-full lg:min-w-full 2xl:min-w-full "
+                }
+              />
+              <Comment
+                name={"irwan"}
+                comment={"krsjdjsgfgfgfgf"}
+                custom={
+                  "xl:min-w-full md:min-w-full lg:min-w-full 2xl:min-w-full "
+                }
+              />
             </div>
 
             <div className="border-[1.5px] font-semibold rounded-full w-fit px-6 py-3 m-auto border-[#E7E7E7] text-[#1F1F1F]">
@@ -117,8 +125,8 @@ const ProductDetail = () => {
             </a>
           </div>
 
-          <div className=" lg:h-[30%] lg:flex items-center gap-1 lg:w-[100%] lg:gap-x-5">
-            <div className="flex h-[90%] lg:gap-x-4 lg:flex-row lg:justify-start flex-col gap-y-4  lg:w-[50%]">
+          <div className="lg:h-[490px] border lg:flex items-center gap-1 lg:w-[100%] lg:gap-x-5">
+            <div className="flex  h-[90%] lg:gap-x-4 lg:flex-row lg:justify-start flex-col gap-y-4  lg:w-[50%]">
               <div className="bg-[#F0EFED] lg:w-full  lg:order-2  hover:border-[1.5px] rounded-3xl max-h-80 min-h-80 lg:min-h-[100%] flex items-center justify-center">
                 <img
                   src="images/baju.png"
@@ -126,22 +134,22 @@ const ProductDetail = () => {
                   className="max-h-60 min-h-60 "
                 />
               </div>
-              <div className="lg:order-1 flex  justify-between gap-4 lg:flex-col  lg:w-[150px]">
-                <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-[31%] flex items-center justify-center ">
+              <div className="lg:order-1 flex  justify-between gap-4 lg:grid lg:grid-cols-1 lg:w-[150px]">
+                <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-full flex items-center justify-center ">
                   <img
                     src="/images/baju.png"
                     alt="baju"
                     className="max-h-20 min-h-20"
                   />
                 </div>
-                <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-[31%] flex items-center justify-center ">
+                <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-full  flex items-center justify-center ">
                   <img
                     src="/images/baju.png"
                     alt="baju"
                     className="max-h-20 min-h-20"
                   />
                 </div>
-                <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-[31%] flex items-center justify-center ">
+                <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-full  flex items-center justify-center ">
                   <img
                     src="/images/baju.png"
                     alt="baju"
@@ -151,11 +159,13 @@ const ProductDetail = () => {
               </div>
             </div>
 
-            <div className="lg:w-[50%] flex flex-col gap-y-4">
+            <div className="lg:w-[50%] flex flex-col gap-y-4 border">
               <div className="">
                 <Label
                   name={"ONE LIFE GRAPHIC T-SHIRT"}
-                  custom={"text-start w-[90%] leading-7"}
+                  custom={
+                    "text-start w-[90%] leading-7 2xl:w-full 2xl:text-[40px]"
+                  }
                   textSize="text-3xl"
                 />
               </div>
@@ -220,8 +230,8 @@ const ProductDetail = () => {
                 </div>
               </div>
               <div className="flex gap-2">
-                <div className="bg-[#F0F0F0] w-[35%] h-12 rounded-full flex items-center justify-between px-4">
-                  <div className="text-3xl flex items-center justify-center h-full pb-[6px] ">
+                <div className="bg-[#F0F0F0] w-[35%] lg:h-10 h-12 rounded-full flex items-center justify-between px-4">
+                  <div className="text-3xl flex items-center  justify-center h-full pb-[6px] ">
                     -
                   </div>
                   <div className="text-xl flex items-center justify-center h-full">
@@ -231,7 +241,7 @@ const ProductDetail = () => {
                     +
                   </div>
                 </div>
-                <div className="bg-black w-[65%] h-12 text-white flex items-center justify-center rounded-full ">
+                <div className="bg-black w-[65%] lg:h-10 h-12 text-white flex items-center justify-center rounded-full ">
                   Add to Cart
                 </div>
               </div>
@@ -314,7 +324,7 @@ const ProductDetail = () => {
             </Cart>
           </div>
 
-          <div className=" md:my-1  0 top-[450px] md:top-[438px] lg:top-[422px]  bg-black h-fit rounded-3xl p-5 md:flex flex flex-col md:flex-row lg:items-center gap-y-3 justify-center w-full gap-3 xl:justify-between xl:p-11 2xl:p-9">
+          <div className=" md:my-1 lg:my-10 top-[450px] md:top-[438px] lg:top-[422px]  bg-black h-fit rounded-3xl p-5 md:flex flex flex-col md:flex-row lg:items-center gap-y-3 justify-center w-full gap-3 xl:justify-between xl:p-11 2xl:p-9">
             <Label
               name={"STAY UPTO DATE ABOUT OUR LATEST OFFERS"}
               textColor={"text-white"}
