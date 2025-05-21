@@ -114,8 +114,8 @@ const ProductDetail = () => {
   return (
     <div className="bg-white h-fit  flex flex-col lg:gap-y-0 overflow-hidden transition-all duration-500 ease-in-out">
       <div className="mt-[60px] 2xl:px-60   pt-10 xl:px-36 lg:flex px-5 lg:mt-[70px] lg:max-h-fit lg:justify-between">
-        <div className="flex flex-col gap-y-4">
-          <div className="flex items-center gap-1">
+        <div className="flex flex-col gap-y-4 ">
+          <div className="flex items-center gap-1 ">
             <a href="/" className="text-[#8C8C8C] hover:text-black">
               Home
             </a>
@@ -125,17 +125,49 @@ const ProductDetail = () => {
             </a>
           </div>
 
-          <div className="lg:h-[490px] border lg:flex items-center gap-1 lg:w-[100%] lg:gap-x-5">
-            <div className="flex  h-[90%] lg:gap-x-4 lg:flex-row lg:justify-start flex-col gap-y-4  lg:w-[50%]">
-              <div className="bg-[#F0EFED] lg:w-full  lg:order-2  hover:border-[1.5px] rounded-3xl max-h-80 min-h-80 lg:min-h-[100%] flex items-center justify-center">
+          <div className="lg:h-fit flex flex-col gap-y-3 border lg:flex-row items-centergap-1 lg:w-[100%] lg:gap-x-5">
+            <div className="flex lg:h-full bg-red-700 md:gap-3 md:h-[450px] md:flex-row h-[90%] lg:gap-x-4 lg:flex-row lg:justify-start flex-col gap-y-4  lg:w-[50%]">
+              <div className="bg-[#F0EFED]  lg:w-full md:border md:w-full md:min-h-full  lg:order-2 md:order-2  hover:border-[1.5px] rounded-3xl max-h-80 min-h-80 lg:min-h-[100%] flex items-center justify-center">
                 <img
                   src="images/baju.png"
                   alt="image"
                   className="max-h-60 min-h-60 "
                 />
               </div>
-              <div className="lg:order-1 flex  justify-between gap-4 lg:grid lg:grid-cols-1 lg:w-[150px]">
-                <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-full flex items-center justify-center ">
+              <div className="lg:order-1 flex md:border md:justify-normal md:w-[25%] md:h-full md:gap-3 justify-between md:order-1 md:flex-col lg:grid lg:grid-cols-1 lg:w-[150px]">
+                {/* <div className="border flex-1">helo</div> */}
+                <div
+                  className="bg-[#F0EFED] flex-1 md-
+                   md:w-full  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] md:max-h-none lg:min-h-full flex items-center justify-center "
+                >
+                  <img
+                    src="/images/baju.png"
+                    alt="baju"
+                    className="max-h-20 min-h-20"
+                  />
+                </div>
+                <div
+                  className="bg-[#F0EFED] flex-1 md-
+                   md:w-full  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] md:max-h-none lg:min-h-full flex items-center justify-center "
+                >
+                  <img
+                    src="/images/baju.png"
+                    alt="baju"
+                    className="max-h-20 min-h-20"
+                  />
+                </div>
+                <div
+                  className="bg-[#F0EFED] flex-1 md-
+                   md:w-full  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] md:max-h-none lg:min-h-full flex items-center justify-center "
+                >
+                  <img
+                    src="/images/baju.png"
+                    alt="baju"
+                    className="max-h-20 min-h-20"
+                  />
+                </div>
+
+                {/* <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-full  flex items-center justify-center ">
                   <img
                     src="/images/baju.png"
                     alt="baju"
@@ -148,14 +180,7 @@ const ProductDetail = () => {
                     alt="baju"
                     className="max-h-20 min-h-20"
                   />
-                </div>
-                <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-full  flex items-center justify-center ">
-                  <img
-                    src="/images/baju.png"
-                    alt="baju"
-                    className="max-h-20 min-h-20"
-                  />
-                </div>
+                </div> */}
               </div>
             </div>
 
