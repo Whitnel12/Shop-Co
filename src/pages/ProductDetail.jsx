@@ -86,6 +86,20 @@ const ProductDetail = () => {
                   "xl:min-w-full md:min-w-full lg:min-w-full 2xl:min-w-full "
                 }
               />
+              <Comment
+                name={"irwan"}
+                comment={"krsjdjsgfgfgfgf"}
+                custom={
+                  "xl:min-w-full md:min-w-full lg:min-w-full 2xl:min-w-full "
+                }
+              />
+              <Comment
+                name={"irwan"}
+                comment={"krsjdjsgfgfgfgf"}
+                custom={
+                  "xl:min-w-full md:min-w-full lg:min-w-full 2xl:min-w-full "
+                }
+              />
             </div>
 
             <div className="border-[1.5px] font-semibold rounded-full w-fit px-6 py-3 m-auto border-[#E7E7E7] text-[#1F1F1F]">
@@ -113,7 +127,7 @@ const ProductDetail = () => {
 
   return (
     <div className="bg-white h-fit  flex flex-col lg:gap-y-0 overflow-hidden transition-all duration-500 ease-in-out">
-      <div className="mt-[60px] 2xl:px-60   pt-10 xl:px-36 lg:flex px-5 lg:mt-[70px] lg:max-h-fit lg:justify-between">
+      <div className="mt-[60px] 2xl:px-60 pt-10 xl:px-36 lg:flex px-5 lg:mt-[70px] lg:max-h-fit lg:justify-between">
         <div className="flex flex-col gap-y-4 ">
           <div className="flex items-center gap-1 ">
             <a href="/" className="text-[#8C8C8C] hover:text-black">
@@ -125,16 +139,16 @@ const ProductDetail = () => {
             </a>
           </div>
 
-          <div className="lg:h-fit flex flex-col gap-y-3 border lg:flex-row items-centergap-1 lg:w-[100%] lg:gap-x-5">
-            <div className="flex lg:h-full bg-red-700 md:gap-3 md:h-[450px] md:flex-row h-[90%] lg:gap-x-4 lg:flex-row lg:justify-start flex-col gap-y-4  lg:w-[50%]">
-              <div className="bg-[#F0EFED]  lg:w-full md:border md:w-full md:min-h-full  lg:order-2 md:order-2  hover:border-[1.5px] rounded-3xl max-h-80 min-h-80 lg:min-h-[100%] flex items-center justify-center">
+          <div className="lg:h-fit xl:h-[500px]  flex flex-col gap-y-3 lg:flex-row items-centergap-1 lg:w-[100%] lg:gap-x-5">
+            <div className="flex lg:h-full md:gap-4 md:h-[450px] md:flex-row h-[90%] lg:gap-x-4 lg:flex-row lg:justify-start flex-col gap-y-4  lg:w-[70%]">
+              <div className="bg-[#F0EFED]  lg:w-full  md:w-full md:min-h-full  lg:order-2 md:order-2  hover:border-[1.5px] rounded-3xl max-h-80 min-h-80 lg:min-h-[100%] flex items-center justify-center">
                 <img
                   src="images/baju.png"
                   alt="image"
                   className="max-h-60 min-h-60 "
                 />
               </div>
-              <div className="lg:order-1 flex md:border md:justify-normal md:w-[25%] md:h-full md:gap-3 justify-between md:order-1 md:flex-col lg:grid lg:grid-cols-1 lg:w-[150px]">
+              <div className="lg:order-1 flex  md:justify-normal md:w-[25%] md:h-full md:gap-4 justify-between md:order-1 md:flex-col lg:grid lg:grid-cols-1 lg:w-[150px] gap-4">
                 {/* <div className="border flex-1">helo</div> */}
                 <div
                   className="bg-[#F0EFED] flex-1 md-
@@ -166,30 +180,15 @@ const ProductDetail = () => {
                     className="max-h-20 min-h-20"
                   />
                 </div>
-
-                {/* <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-full  flex items-center justify-center ">
-                  <img
-                    src="/images/baju.png"
-                    alt="baju"
-                    className="max-h-20 min-h-20"
-                  />
-                </div>
-                <div className="bg-[#F0EFED]  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] lg:min-h-full  flex items-center justify-center ">
-                  <img
-                    src="/images/baju.png"
-                    alt="baju"
-                    className="max-h-20 min-h-20"
-                  />
-                </div> */}
               </div>
             </div>
 
-            <div className="lg:w-[50%] flex flex-col gap-y-4 border">
+            <div className="lg:w-[40%] flex flex-col gap-y-4 xl:justify-between ">
               <div className="">
                 <Label
                   name={"ONE LIFE GRAPHIC T-SHIRT"}
                   custom={
-                    "text-start w-[90%] leading-7 2xl:w-full 2xl:text-[40px]"
+                    "text-start w-[90%] leading-9 2xl:w-full xl:text-[30px] 2xl:text-[35px] "
                   }
                   textSize="text-3xl"
                 />
@@ -254,7 +253,7 @@ const ProductDetail = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex gap-2">
+              <div className="flex gap-2 md:w-[600px] lg:w-[100%] ">
                 <div className="bg-[#F0F0F0] w-[35%] lg:h-10 h-12 rounded-full flex items-center justify-between px-4">
                   <div className="text-3xl flex items-center  justify-center h-full pb-[6px] ">
                     -
@@ -296,7 +295,7 @@ const ProductDetail = () => {
           {renderProductDetails()}
 
           <div className="w-[80%] m-auto">
-            <Label name={"YOU MIGHT ALSO LIKE"} />
+            <Label name={"YOU MIGHT ALSO LIKE"} custom={"2xl:w-full"} />
           </div>
 
           <div
