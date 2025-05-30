@@ -1,10 +1,13 @@
 import { FaStar } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const Cart = ({ children }) => {
+const Cart = ({ children, link }) => {
   return (
-    <div className="h-[90%] w-fit flex flex-col gap-y-2 justify-centermd:w-[400px]">
-      {children}
-    </div>
+    <Link to={link} className="h-[90%]">
+      <div className="h-[90%] w-fit flex flex-col gap-y-2 justify-centermd:w-[400px]">
+        {children}
+      </div>
+    </Link>
   );
 };
 

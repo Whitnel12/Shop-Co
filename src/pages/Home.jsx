@@ -6,8 +6,11 @@ import { FaArrowRight } from "react-icons/fa6";
 import { FaArrowLeft } from "react-icons/fa6";
 import Comment from "../components/Comment";
 import Footer from "../components/Footer";
+import { useEffect, useState } from "react";
 
 const Home = () => {
+  const [Products, setProduct] = useState([]);
+
   const slideLeft = (slideId) => {
     var slider = document.getElementById(slideId);
     slider.scrollLeft = slider.scrollLeft - 500;
@@ -91,6 +94,15 @@ const Home = () => {
       price: 520,
     },
   ];
+
+  useEffect(() => {
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((data) => setProduct(data))
+      .catch((err) => {
+        console.log(err);
+      });
+  }, []);
 
   return (
     <div className="bg-[#F2F0F1] h-fit flex flex-col lg:gap-y-0 overflow-hidden transition-all duration-500 ease-in-out">
@@ -185,11 +197,11 @@ const Home = () => {
             id="newArrivalsSlider"
             className="flex gap-3 h-96 w-full xl:relative items-center overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
           >
-            {ItemProduct.map((item, index) => (
-              <Cart key={index}>
+            {Products.map((item, index) => (
+              <Cart key={index} link={"/product-detail"}>
                 <Cart.CartImage src={item.image} alt={item.label} />
                 <Cart.CartText
-                  label={item.label}
+                  label={item.name}
                   rating1={item.rating1}
                   rating2={item.rating2}
                   price={`${item.price}`}
@@ -225,42 +237,22 @@ const Home = () => {
               onClick={() => slideRight("topSellingSlider")}
             />
 
-            <Cart>
-              <Cart.CartImage src={"/public/images/baju.png"} alt={"baju"} />
-              <Cart.CartText
-                label={"T-shirt with Tape Details"}
-                rating1={"5.0"}
-                rating2={"5"}
-                price={"$120"}
-              />
-            </Cart>
-            <Cart>
-              <Cart.CartImage src={"/public/images/baju.png"} alt={"baju"} />
-              <Cart.CartText
-                label={"T-shirt with Tape Details"}
-                rating1={"5.0"}
-                rating2={"5"}
-                price={"$120"}
-              />
-            </Cart>
-            <Cart>
-              <Cart.CartImage src={"/public/images/baju.png"} alt={"baju"} />
-              <Cart.CartText
-                label={"T-shirt with Tape Details"}
-                rating1={"5.0"}
-                rating2={"5"}
-                price={"$120"}
-              />
-            </Cart>
-            <Cart>
-              <Cart.CartImage src={"/public/images/baju.png"} alt={"baju"} />
-              <Cart.CartText
-                label={"T-shirt with Tape Details"}
-                rating1={"5.0"}
-                rating2={"5"}
-                price={"$120"}
-              />
-            </Cart>
+            <div
+              id="newArrivalsSlider"
+              className="flex gap-3 h-96 w-full xl:relative items-center overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
+            >
+              {ItemProduct.map((item, index) => (
+                <Cart key={index} link={"/product-detail"}>
+                  <Cart.CartImage src={item.image} alt={item.label} />
+                  <Cart.CartText
+                    label={item.label}
+                    rating1={item.rating1}
+                    rating2={item.rating2}
+                    price={`${item.price}`}
+                  />
+                </Cart>
+              ))}
+            </div>
           </div>
 
           <div
