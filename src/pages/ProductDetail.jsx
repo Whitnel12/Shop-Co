@@ -6,11 +6,27 @@ import Cart from "../components/Cart";
 import { FaCaretRight, FaCaretLeft } from "react-icons/fa6";
 import Footer from "../components/Footer";
 import { TfiEmail } from "react-icons/tfi";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { useParams } from "react-router-dom";
+import { image } from "framer-motion/client";
 
 const ProductDetail = () => {
+  const { id } = useParams();
+  const [products, setProduct] = useState(null);
   const [details, setDetails] = useState("product-details");
+  const [activeImages, setactiveImages] = useState(0);
+
+  useEffect(() => {
+    fetch("/products.json")
+      .then((res) => res.json())
+      .then((data) => {
+        const dataFound = data.find((item) => item.id === parseInt(id));
+        // console.log(dataFound);
+        setProduct(dataFound);
+      })
+      .catch((err) => console.log(err));
+  }, [id]);
 
   const slideLeft = (slideId) => {
     var slider = document.getElementById(slideId);
@@ -143,43 +159,28 @@ const ProductDetail = () => {
             <div className="flex lg:h-full md:gap-4 md:h-[450px] md:flex-row h-[90%] lg:gap-x-4 lg:flex-row lg:justify-start flex-col gap-y-4  lg:w-[70%]">
               <div className="bg-[#F0EFED]  lg:w-full  md:w-full md:min-h-full  lg:order-2 md:order-2  hover:border-[1.5px] rounded-3xl max-h-80 min-h-80 lg:min-h-[100%] flex items-center justify-center">
                 <img
-                  src="images/baju.png"
+                  src={`${products?.images[activeImages]}`}
                   alt="image"
                   className="max-h-60 min-h-60 "
                 />
               </div>
+              {/* {console.log("hasil : ", Products.images)} */}
+
               <div className="lg:order-1 flex  md:justify-normal md:w-[25%] md:h-full md:gap-4 justify-between md:order-1 md:flex-col lg:grid lg:grid-cols-1 lg:w-[150px] gap-4">
-                {/* <div className="border flex-1">helo</div> */}
-                <div
-                  className="bg-[#F0EFED] flex-1 md-
-                   md:w-full  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] md:max-h-none lg:min-h-full flex items-center justify-center "
-                >
-                  <img
-                    src="/images/baju.png"
-                    alt="baju"
-                    className="max-h-20 min-h-20"
-                  />
-                </div>
-                <div
-                  className="bg-[#F0EFED] flex-1 md-
-                   md:w-full  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] md:max-h-none lg:min-h-full flex items-center justify-center "
-                >
-                  <img
-                    src="/images/baju.png"
-                    alt="baju"
-                    className="max-h-20 min-h-20"
-                  />
-                </div>
-                <div
-                  className="bg-[#F0EFED] flex-1 md-
-                   md:w-full  hover:border-[1.5px] lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] md:max-h-none lg:min-h-full flex items-center justify-center "
-                >
-                  <img
-                    src="/images/baju.png"
-                    alt="baju"
-                    className="max-h-20 min-h-20"
-                  />
-                </div>
+                {products?.images?.map((image, index) => (
+                  <div
+                    key={index}
+                    onClick={() => setactiveImages(index)}
+                    className={`bg-[#F0EFED] flex-1 
+                   md:w-full   lg:w-[100%] rounded-2xl w-[40%] max-h-[105px] min-h-[105px] md:max-h-none lg:min-h-full flex items-center justify-center ${
+                     activeImages === index ? "border-[1.5px]" : ""
+                   } 
+                   
+                   `}
+                  >
+                    <img src={image} alt="baju" className="max-h-20 min-h-20" />
+                  </div>
+                ))}
               </div>
             </div>
 

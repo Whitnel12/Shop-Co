@@ -53,14 +53,14 @@ const Home = () => {
   const ItemProduct = [
     {
       image: "/public/images/baju.png",
-      label: "T-shirt with Tape Details",
+      label: "T-shirt with Tape Details 1",
       rating1: "5.0",
       rating2: "5",
       price: 140,
     },
     {
       image: "/public/images/baju.png",
-      label: "T-shirt with Tape Details",
+      label: "T-shirt with Tape Details 2",
       rating1: "5.0",
       rating2: "5",
       price: 180,
@@ -96,7 +96,7 @@ const Home = () => {
   ];
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch("/products.json")
       .then((res) => res.json())
       .then((data) => setProduct(data))
       .catch((err) => {
@@ -198,10 +198,10 @@ const Home = () => {
             className="flex gap-3 h-96 w-full xl:relative items-center overflow-x-scroll scroll whitespace-nowrap scroll-smooth scrollbar-hide"
           >
             {Products.map((item, index) => (
-              <Cart key={index} link={"/product-detail"}>
-                <Cart.CartImage src={item.image} alt={item.label} />
+              <Cart key={index} link={`/product-detail/${item.id}`}>
+                <Cart.CartImage src={item.images[0]} alt={item.label} />
                 <Cart.CartText
-                  label={item.name}
+                  label={item.label}
                   rating1={item.rating1}
                   rating2={item.rating2}
                   price={`${item.price}`}

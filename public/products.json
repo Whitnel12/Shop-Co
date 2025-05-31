@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "label": "T-shirt with Tape Details 1",
+    "rating1": "5.0",
+    "rating2": "5",
+    "price": "140",
+    "images": [
+      "/public/images/baju.png",
+      "/public/images/baju-2.png",
+      "/public/images/baju-3.png"
+    ],
+    "color": ["Red", "Black", "White"],
+    "size": ["S", "M", "L", "XL"],
+    "desk": [
+      "100% cotton",
+      "Comfort fit",
+      "Machine washable"
+    ],
+    "rating": [
+      {
+        "user": "Ali",
+        "comment": "Sangat bagus dan nyaman dipakai!",
+        "stars": 5
+      },
+      {
+        "user": "Budi",
+        "comment": "Kualitas bahan mantap.",
+        "stars": 5
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah bisa dicuci dengan mesin?",
+        "answer": "Ya, sangat aman untuk mesin cuci."
+      },
+      {
+        "question": "Apakah tersedia ukuran XXL?",
+        "answer": "Saat ini hanya tersedia sampai ukuran XL."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "label": "Casual Hoodie Premium 2",
+    "rating1": "4.8",
+    "rating2": "4",
+    "price": "220",
+    "images": [
+      "/public/images/baju.png",
+      "/public/images/baju-2.png",
+      "/public/images/baju-3.png"
+    ],
+    "color": ["Gray", "Navy"],
+    "size": ["M", "L", "XL"],
+    "desk": [
+      "Bahan fleece lembut",
+      "Cocok untuk cuaca dingin",
+      "Desain minimalis modern"
+    ],
+    "rating": [
+      {
+        "user": "Citra",
+        "comment": "Hangat dan stylish!",
+        "stars": 5
+      }
+    ],
+    "faqs": [
+      {
+        "question": "Apakah ini unisex?",
+        "answer": "Ya, cocok untuk pria dan wanita."
+      }
+    ]
+  }
+]
