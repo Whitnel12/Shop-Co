@@ -66,9 +66,11 @@ const Navbar = () => {
               {/* <FaSearch className="absolute top-3 left-4 text-neutral-600" /> */}
               <FaSearch className="lg:absolute top-3 left-4 lg:top-[8px] xl:top-3 lg:text-[#929292] xl:size-4 lg:size-4 size-5 2xl:size-5 2xl:top-3 2xl:left-6" />
             </div>
-            <div className="h-fit">
-              <SlBasket className="size-6 xl:size-6 2xl:size-7 cursor-pointer" />
-            </div>
+            <a href="/product-cart">
+              <div className="h-fit">
+                <SlBasket className="size-6 xl:size-6 2xl:size-7 cursor-pointer" />
+              </div>
+            </a>
             <div className="h-fit">
               <MdAccountCircle className="size-7 xl:size-8 2xl:size-8 cursor-pointer" />
             </div>
